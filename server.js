@@ -33,7 +33,7 @@ app.post('/', (req, res)=>{
         from: process.env.EMAIL_ID,
         to: req.body.email, 
         subject: 'Thanks For Signing Up: Stay Tuned',
-        text: 'Hello from Andrews Attire, look out for item drops and website updateds via our social media'
+        text: 'Hello from Andrews Attire, look out for item drops and website updates via our social media'
     }
 
     transporter.sendMail(mailOptions, (error, info)=>{
