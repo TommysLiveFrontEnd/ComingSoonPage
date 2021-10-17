@@ -1,0 +1,64 @@
+@use '../util' as *;
+
+//block
+.s-card {
+    @include breakpoint(large) {
+        background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 97%));
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "content image";
+
+        //element
+        &__img {
+            grid-area: image;
+        }
+        &__text { 
+            padding: rem(70) rem(70) rem(15) rem(55);
+            @include breakpoint(xlarge) {
+                padding: rem(70) rem(70) rem(40) rem(55);
+            }    
+        }
+        &__socials {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0;
+            padding-bottom: rem(20);
+            list-style: none;
+
+            .list-item {
+                max-height: 15px; 
+            }
+        }
+
+        //modifiers
+        &--img {
+            max-width: 100%;
+            height: rem(460);
+            padding-left: rem(10) !important;
+            padding-bottom: 0;
+            @include breakpoint(xlarge) {
+                height: rem(440);
+            }             
+        }
+        &--header {
+            font-size: rem(30);
+            margin-bottom: rem(18);
+            @include breakpoint(xlarge) {
+                font-size: rem(35);
+            }    
+            
+        }
+        &--text {
+            padding: rem(10) rem(5) rem(0) rem(0);
+            @include breakpoint(xlarge) {
+                padding: rem(30) rem(5) rem(0) rem(0);
+                font-size: rem(17);
+            }      
+        }
+
+        input {
+            width: 280px;
+        }
+    }
+}

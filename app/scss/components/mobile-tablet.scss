@@ -1,0 +1,80 @@
+@use '../util' as *;
+
+// block 
+.s-card {
+    border-radius: rem(15);
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 97%));
+
+    // element 
+    &__text {
+        padding: rem(0) rem(10) rem(0) rem(10);
+
+        @include breakpoint-down(xsmall) {
+            padding: rem(0) rem(30) rem(0) rem(30);
+        }
+    }
+    &__socials {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0;
+        padding-bottom: rem(20);
+        list-style: none;
+
+        .fab {
+            color: var(--des-red);
+        }
+    }
+
+    &__email {
+        padding-bottom: rem(40);
+    }
+
+    //modifiers 
+    &--img {
+        max-width: 100%;
+        height: auto;
+        border-radius: rem(10);
+    }
+    &--header {
+        text-transform: uppercase;
+        font-size: rem(35);
+        font-weight: 400;
+        letter-spacing: 8px;
+        font-family: var(--font-main);
+        color: var(--black);   
+    }
+    &--text {
+        padding: rem(10) rem(0) rem(10) rem(0);
+        font-family: var(--font-main);
+        color: var(--slightlytransparentwhite2);
+    
+    }
+    span {
+        display: block;
+        color: var(--des-red);
+    }
+
+    &--btn {
+        height: 40px;
+        width: 55px;
+        border-radius: 25px;
+        text-align: center;
+        margin-left: -55px;
+        border: none;
+        background: var(--soft-red);
+        background: -webkit-linear-gradient(135deg, hsl(0, 0%, 35%), hsl(0, 0%, 84%));
+    }
+
+    input {
+        font-size: rem(12);
+        border-radius: 25px;
+        border: solid 1px var(--des-red);
+        width: 250px;
+        height: 40px;
+        padding-left: 15px;
+    }
+    
+    input::placeholder {
+        color: var(--des-red);
+    }
+}
