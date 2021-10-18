@@ -1,12 +1,14 @@
 const index = document.querySelector('.contact-form');
 let email = document.getElementById('email');
+let small = document.getElementById('small');
 let btnClear = document.querySelector('button');
 let inputs = document.querySelector('input');
 
 
-
 index.addEventListener('submit', (e)=>{
 	e.preventDefault();
+
+	
 	
 	let formData = {
 		email: email.value
@@ -18,7 +20,7 @@ index.addEventListener('submit', (e)=>{
 	xhr.onload = function() {
 		console.log(xhr.responseText);
 		if(xhr.responseText == 'success'){
-			document.getElementById('email').value='';
+			email.value = '';
 		}else {
 			alert('something went wrong')
 		}
@@ -26,7 +28,26 @@ index.addEventListener('submit', (e)=>{
 
 	xhr.send(JSON.stringify(formData));
 
+	checkInputs();
 })
+
+
+function checkInputs() {
+	const emailValue = email.value;
+
+	if(emailValue === '') {
+
+	} else {
+		setSucessFor(email);
+	}
+}
+
+function setSucessFor(input) {
+	const formController = input.parentElement;
+	formController.className = 'form-controller success'
+}
+
+
 
 function validate(){
 	var mail = document.getElementById('text').value;

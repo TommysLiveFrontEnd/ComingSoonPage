@@ -77,4 +77,17 @@
     input::placeholder {
         color: var(--des-red);
     }
+
+    small {
+        display: block;
+        position: absolute;
+        visibility: hidden;
+        width: 90%;
+        letter-spacing: rem(1);
+        color: var(--green);
+    }
+
+    .form-controller.success small {
+        visibility: visible;
+    }
 }

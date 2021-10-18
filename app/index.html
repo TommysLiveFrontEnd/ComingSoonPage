@@ -48,8 +48,12 @@
         <!--Email-->
         <div class="s-card__email">
           <form class="contact-form">
-            <input class="s-card--email" type="email" id="email" name="email" placeholder="Enter Your Email" required> <i class="">
-            <button class="s-card--btn" onclick="validate()" type="submit"><img src="/images/icon-arrow.svg" alt="submit button"></button>
+            <!--Email Sent Helper Class // Validation Done Back End for errors-->
+            <div class="form-controller">
+              <input class="s-card--email" type="email" id="email" name="email" placeholder="Enter Your Email" required> 
+              <button class="s-card--btn" onclick="validate()" type="submit"><img src="/images/icon-arrow.svg" alt="submit button"></button>
+              <small id="small">Email Sent!</small>
+            </div>
           </form>
         </div>
         <!--Socials-->
