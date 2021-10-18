@@ -18,9 +18,7 @@ index.addEventListener('submit', (e)=>{
 	xhr.onload = function() {
 		console.log(xhr.responseText);
 		if(xhr.responseText == 'success'){
-			btnClear.addEventListener('click', () => {
-				inputs.forEach(input => input.value = '');
-			});
+			document.getElementById('email').value='';
 		}else {
 			alert('something went wrong')
 		}
