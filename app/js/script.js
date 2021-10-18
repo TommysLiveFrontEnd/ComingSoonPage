@@ -8,8 +8,6 @@ let inputs = document.querySelector('input');
 index.addEventListener('submit', (e)=>{
 	e.preventDefault();
 
-	
-	
 	let formData = {
 		email: email.value
 	}
